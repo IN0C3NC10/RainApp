@@ -32,9 +32,9 @@ class _HomeState extends State<Home> {
   void calculate(){
     setState(() {
       double rain = double.parse(rainController.text)*25.4;
-      //..realiza as comparações
+      //..make comparisons
       if(rain != null){
-        result = "Choveu (${rain.toString()})";
+        result = "Choveu (${rain.toString()} mm)";
       }else{
         result="Insira a quantidade em polegadas!";
       }
@@ -60,7 +60,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
 
       body: SingleChildScrollView(
-        //"SingleChildScrollView" USADO PARA NÃO ATRAPAHAR O TECLADO E ROLAR A TELA
+        //"SingleChildScrollView" used for don't stay in front of keyboard and did scroll screen
         padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
         child: Form(
           key: formKey,
